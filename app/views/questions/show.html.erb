@@ -1,0 +1,91 @@
+<br>
+<br>
+<div class="question-show">
+
+ <div class="ko ko-1">
+ <%= @question.user.name %>
+ </div>
+<br>
+  <div class="ko ko-2">
+     <h1><%= image_tag @question.image_url %></h1><br>
+  </div>
+  <div class="ko ko-3">
+    <%= @question.created_at.strftime("%Y-%m-%d")  %>
+     <br> 
+  </div>
+   <div class="ko ko-4">
+   
+     <% if current_user.already_liked?(@question) %>
+      <%= button_to 'やっぱ、似合ってない', question_like_path(@question), method: :delete,class:"likebtn1" %>
+      <% else %>
+       <%= button_to '似合ってる', question_likes_path(@question),class:"likebtn2" %>
+      <% end %>
+      </div>   
+      <div class="ko ko-5">
+       <h1>♡ <%= @question.likes.count %></h1>
+      </div>
+      <div class="ko ko-6">
+          <h1><%= image_tag "men.jpg", width:"50px" %> :  <%= @menlikes %> 
+       <%= image_tag "women.jpg", width:"50px" %>: <%= @womenlikes %>
+        <br>
+      </div>
+      <div class="ko ko-7">
+      <% @question.situations.each do |tag| %>
+       <h2> <%= "#"+tag.body %> </h2>
+       <% end %>
+       </div>
+       <br>
+      <div class="ko ko-8">
+      <h1><%= @question.about %></h1>
+      <br>
+      <br>
+      </div>
+     
+</div>
+
+<div class="comment-wrapper">
+   
+ <div class="comment-ko2">
+  <% if user_signed_in? %>
+    <%= form_with(model: [@question, @comment], local: true) do |f| %>
+      
+      <%= f.text_area :comment,rows:"3",cols:"80", placeholder:"アドバイスを入力",class:"advisetext"%>
+      <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
+      
+   <div class="comment-ko3">
+      <%= button_tag type: "submit", class:"sendbtn" do  %>
+        <i class="far fa-comment1s"></i> Send 
+        <% end %>
+        </div> 
+        </div> 
+      <br>
+
+
+      
+      <div class="comment-ko1">
+<h2><font face＝"ＭＳ Ｐ明朝,ＭＳ 明朝">アドバイス一覧</font></h2>
+ </div>
+
+ 
+  <% @comments.each do |c| %>
+    <div class="balloon">
+    <figure class="balloon-image-left">
+    <%= image_tag "user.jpeg" %>
+    <figcaption class="balloon-image-description">
+    <%= c.user.name unless c.user.blank? %>
+    </figcaption>
+    </figure>
+    <div class="balloon-text-right">
+    <p>
+    <%= c.comment %>　
+    </p>
+    </div>
+    </div> 
+    <% end %>
+ 
+      <% end %>
+     
+ 
+</div>
+<% end %>
+

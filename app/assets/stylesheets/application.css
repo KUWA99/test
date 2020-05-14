@@ -1,0 +1,89 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ * {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    
+
+    }
+    .index1{
+      transition-duration: 0.5s;
+    }
+    .index1:hover{
+      transform: scale(1.2);
+      transition-duration: 0.5s;
+    }
+  
+  header {
+    background-color: #FFFFFF;
+    height: 80px;
+    padding: 60px 0px ;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+   position: relative;
+    
+  }
+  header a {
+    color: #131414; 
+    text-decoration: none; 
+  }
+  header h1 {
+    color: #131414;
+    width: auto;
+    max-width: 1px;
+    height: auto;
+    
+  }
+  .header-list {
+    display: flex;
+    align-items: center;
+  }
+  header ul {
+    display: flex;
+
+    border-bottom: 4px solid #090a0c;
+    margin-left: 200px;
+    padding-left:600px;
+   
+
+  }
+  header li {
+    list-style: none;
+    position:relative;
+    margin-right: 5%;
+ }
+ footer {
+    color: rgb(236, 164, 8);
+    height: 30px;
+    background-color:white;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    
+    
+  }
+  
+  

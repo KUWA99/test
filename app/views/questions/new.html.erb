@@ -1,0 +1,45 @@
+<div class="new">
+
+<%= form_for @question do |f| %>
+  <div class="new field1">
+    <h2><%= f.label :コーディネート写真 %></h2>
+     <br>
+     </div>
+     <div class="new imagefile">
+     <%= f.file_field :image %>
+     
+    
+     </div>
+     <div class="new situation">
+     <h2>シチュエーション</h2> 
+     </div>
+     <%= f.collection_check_boxes(:situation_ids, Situation.all, :id, :body) do |t| %>
+      <div class="new field2">
+        <%= t.label do %>
+         
+          <%= t.check_box %>
+          <label><%= t.text %></label>
+          </div>
+     
+          <% end %>
+          <% end %>
+          <div class="new comment">
+         <h2><%= f.label :コメント %></h2>
+         </div>
+          <br>
+          <div class="new field3">
+         <br>
+          <%= f.text_field :about, :size => 140 %>
+          <div>
+          <br>
+          <div class="new field4">
+      <%= f.submit "投稿",:class=>"btn" %>
+          </div>
+          
+          <%= image_tag "newpage.jpeg",  class: "newimage", width: "300px", height: "470px" %>
+      
+</div>  
+  
+  
+  <% end %>
+    

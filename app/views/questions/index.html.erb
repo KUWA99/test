@@ -1,0 +1,46 @@
+<br>
+<div class="allbtn">
+
+<%= button_to "#デート" , "/questions/index/", { method: :get, params: {situation_id: 1},class:"indexbtn1" }  %>
+<br>
+<%= button_to "#おでかけ" , "/questions/index/", { method: :get, params: {situation_id: 2} ,class:"indexbtn2"}  %>
+<br>
+<%= button_to "#お買い物" ,"/questions/index/", { method: :get, params: {situation_id: 3},class:"indexbtn3" }  %>
+<br>
+<%= button_to "#その他" , "/questions/index/", { method: :get, params: {situation_id: 4},class:"indexbtn4" }  %>
+<br>
+</div>
+<div class="questions-container">
+  <% @questions.each do |q| %>
+    <div class="questions">
+    <%= q.user.name %> 
+    <br>
+    
+    <a href="/questions/<%= q.id %>"><%=  image_tag q.image_url, class:"userindex", width: "600px", height: "800px"%> </a>
+    <br>
+   <%= q.about %>
+    <br>
+  ♡<%= q.liked_users.count %>
+
+  <% q.situations.each do |s| %>
+     <%="#"+ s.body %>
+
+     <% end %>
+<br>
+<%= q.created_at.strftime("%Y-%m-%d") %>
+  <br>  
+  <br>
+ </div>
+<% end %>
+ </div>
+<br>
+<div class="body">
+   <%= image_tag "blackT1.jpg",  class: "image", width: "300px", height: "900px" %>
+</div>
+<div class="body1">
+   <%= image_tag "grayT1.jpg",  class: "image", width: "300px", height: "900px" %>
+</div>
+<br>
+<div class="pagenate">
+    <%= paginate  @questions %>
+</div>

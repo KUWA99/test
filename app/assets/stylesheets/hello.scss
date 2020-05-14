@@ -1,0 +1,255 @@
+// Place all the styles related to the hello controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+#header,#footer{
+    display:none;
+  }
+  .hello{
+   position:relative; 
+   display: flex;
+   flex-direction: row;
+  }
+  
+  .image1{
+      position:absolute ;
+   top: 50px;
+   left: 330px;
+  }
+
+  
+  .pic-ctn {
+      
+    width: 100vw;
+    height: 200px;
+  }
+  
+  @keyframes display {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+  }
+  
+  .pic-ctn {
+    position: absolute;
+    width: 100vw;
+  height: 300px;
+  margin-top: 0vh;
+   left: 400px;
+   
+  }
+  
+  .pic-ctn > img {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 100px);
+    opacity: 0;
+    animation: display 10s infinite;
+  }
+  
+  img:nth-child(2) {
+    animation-delay: 2s;
+  }
+  img:nth-child(3) {
+    animation-delay: 4s;
+  }
+  img:nth-child(4) {
+    animation-delay: 6s;
+  }
+  img:nth-child(5) {
+    animation-delay: 8s;
+  }
+  .sentence{
+      position: absolute;
+  top: 400px;
+  left: 700px;
+  color:black;
+  font-family:serif;
+  }
+
+  .logbtn{
+  position: absolute;
+  top:750px;
+  left: 650px;
+  width: 100px;
+    border-radius: 25px;
+    border-radius: 25px;
+    background-color:white;
+    border: 2px solid rgb(19, 17, 17);
+    color: rgb(14, 12, 12);
+    line-height: 50px;
+  
+
+  }
+  
+  .logbtn:hover {
+    background-color: rgb(12, 10, 10);
+    border-color: #fbfcfc;
+    color: #ebeef0;
+    opacity:0.8;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .newbtn{
+  position:absolute;
+  top:750px;
+  left:850px;
+  width: 100px;
+    border-radius: 25px;
+    border-radius: 25px;
+    background-color:white;
+    border: 2px solid rgb(19, 17, 17);
+    color: rgb(14, 12, 12);
+    line-height: 50px;
+  }
+  .newbtn:hover {
+    background-color: rgb(12, 10, 10);
+    border-color: #fbfcfc;
+    color: #ebeef0;
+    opacity:0.8;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .usebtn{
+    position:absolute;
+    left: 850px;
+    top:750px;
+    width: 100px;
+    border-radius: 25px;
+    border-radius: 25px;
+    background-color:white;
+    border: 2px solid rgb(19, 17, 17);
+    color: rgb(14, 12, 12);
+    line-height: 50px;
+
+
+  }
+  .newbtn:hover {
+    background-color: rgb(12, 10, 10);
+    border-color: #fbfcfc;
+    color: #ebeef0;
+    opacity:0.8;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .commentbox{
+display:flex;
+flex-direction: row;
+position: relative;
+padding-bottom:2000px;
+height: 100%;
+
+  }
+
+  .comment1{
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+font-weight: 500;
+      top: 300px;
+      position: absolute;
+  left: 400px;
+  
+
+  }
+
+  .pic1{
+      position: absolute;
+    left:680px;
+
+  }
+  .pic2{
+    position: absolute;
+    left:1280px;
+
+  }
+  .comment2{
+   top: 500px;
+   position: absolute;
+   left: 400px;
+
+  }
+  .comment3{
+   
+    top: 1130px;
+    position: absolute;
+font-size: large;
+    left:1700px;
+  }
+
+  .comment4{
+    top: 1300px;
+    position: absolute;
+font-size: large;
+font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+font-weight: 500;
+    left:1600px;
+  }
+  .pic-ctn1 {
+      position: absolute;
+    width: 100vw;
+    height: 200px;
+  }
+  
+  @keyframes display {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+  }
+  
+  .pic-ctn1 {
+    position: absolute;
+    width: 100%;
+ right: 1000px;
+  margin-top: 1000px;
+ 
+   
+  }
+  
+  .pic-ctn1 > img {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 100px);
+    opacity: 0;
+    animation: display 10s infinite;
+  }
+  
+  img:nth-child(2) {
+    animation-delay: 2s;
+  }
+  img:nth-child(3) {
+    animation-delay: 4s;
+  }
+  

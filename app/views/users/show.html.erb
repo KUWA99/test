@@ -1,0 +1,29 @@
+<%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+<div class="title">
+<h1>マイページ</h1>
+</div>
+<br>
+<div class="title2">
+<h3>過去の投稿</h3>
+</div>
+<div class="mypage-container">
+<% @question.each do |q| %>
+  <div class="mypage">
+  <br>
+
+  <a href="/questions/<%= q.id %>"><%=  image_tag q.image_url,  width: "600px", height: "800px"%> </a>
+    <br>
+    <%= q.about %>
+
+    <% q.situations.each do |s| %>
+     
+      <%="#"+ s.body %>
+      <% end %>
+      <br>
+      ♡ <%= q.likes.count %><br>
+    
+  </div>    
+  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+    <% end %>
+</div>
+

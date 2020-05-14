@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> coOde </title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+  </head>
+
+  <body>
+  <header>
+  <h1><%= image_tag('coOde.png') %></h1>
+  <div class="header-list">
+  <ul>
+    <li> <%= link_to image_tag('index.jpg'), questions_index_path,class: "index1" %></li>
+    <li><%= link_to image_tag('new.jpg') ,questions_new_path ,class: "new1"%></li>
+    <li><%= link_to image_tag('user.jpg') ,users_show_url,class: "user1" %></li>
+    
+  </ul>
+  
+  </div>
+</header>
+<main>
+
+    <%= yield %>
+    </main>
+    <footer>
+    <p>Copyright © KUWA All Rights Reserved.</p>
+   </footer>
+  </body>
+</html>
